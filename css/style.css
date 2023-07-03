@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-clr: #30511f;
+  --secondary_clr: #497931;
+  --menu-clr: #024019;
+  --paragraph-clr: #818181;
+  --primary-font: halvetica-now-medium-500;
+  --main-heading-font: halvetica-medium-extended-500;
+  --paragraph-font: halvetica-now-medium-500;
+}
+
+/*------------------------- TYPOGRAPHY --------------------------------*/
+@font-face {
+  font-family: halvetica-medium-extended-500;
+  src: url("/Typography/Helvetica\ Neue\ Medium\ Extended.otf");
+}
+@font-face {
+  font-family: halvetica-now-bold-700;
+  src: url("/Typography/HelveticaNowDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: halvetica-now-light-300;
+  src: url("/Typography/HelveticaNowDisplay-Light.ttf");
+}
+@font-face {
+  font-family: halvetica-now-medium-500;
+  src: url("/Typography/HelveticaNowDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: halvetica-now-regular-400;
+  src: url("/Typography/HelveticaNowDisplay-Regular.ttf");
+}
+/*------------------------- TYPOGRAPHY --------------------------------*/
+
+html {
+  color-scheme: light;
+}
+body {
+  font-family: var(--primary-font);
+  line-height: 1.489em;
+  color: var(--primary-clr);
+}
+img,
+svg,
+picture {
+  display: block;
+  width: 100%;
+}
+h1 {
+  font-family: var(--main-heading-font);
+}
+p {
+  color: var(--paragraph-clr);
+}
+
+.flex-row {
+  display: flex;
+}
+.grid-row {
+  display: grid;
+}
+.container {
+  max-width: 1670px;
+  margin-inline: auto;
+  padding: 0 1.5rem;
+}
+
+/*------------- Header CSS Starts------------- */
+header .topBar {
+  text-align: center;
+  background-color: var(--primary-clr);
+  padding: 1rem 0;
+}
+header .topBar p {
+  color: white;
+  font-size: 12px;
+}
+header .secondar_menuBar {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #979797;
+  padding: 1rem 0;
+}
+header .secondar_menuBar .main_logo {
+  display: flex;
+}
+header .secondar_menuBar .search_bar {
+  position: relative;
+  width: 100%;
+}
+header .secondar_menuBar .search_bar input {
+  width: 100%;
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
+  border: 1px solid black;
+  outline: none;
+  font-family: halvetica-now-bold-700;
+}
+header .secondar_menuBar .search_bar img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 7%;
+  top: 30%;
+}
+header .secondar_menuBar .support_wishlist {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+header .secondar_menuBar .support_wishlist #theme_Button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+header .secondar_menuBar .support_wishlist img {
+  width: 20px;
+  height: 20px;
+}
+
+header .widget_Area img {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+header .widget_Area {
+  display: flex;
+  background-color: var(--primary-clr);
+  border-radius: 3.438rem;
+  position: relative;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+header .widget_Area .support {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.2rem 1rem 0.2rem 1.5rem;
+  cursor: pointer;
+  border-right: 1px solid white;
+  color: white;
+  transition: all 0.3s ease;
+}
+header .widget_Area .wishlist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.2rem 1.5rem 0.2rem 0rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+header .widget_Area .support:hover,
+header .widget_Area .wishlist:hover {
+  color: rgb(170, 170, 170);
+}
+header .widget_Area .support:hover img,
+header .widget_Area .wishlist:hover img {
+  filter: contrast(0.5);
+}
+
+header .primary_menuBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+header .primary_menuBar > ul {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+header .primary_menuBar > ul > li {
+  list-style: none;
+  position: relative;
+}
+header .primary_menuBar > ul > li:not(.home)::after {
+  content: url("/assets/navigation_downarrow.svg");
+  cursor: pointer;
+  padding-left: 0.5rem;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+header .primary_menuBar > ul > li:hover:not(.home)::after {
+  transform: rotate(180deg);
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+header .primary_menuBar > ul > li > a {
+  text-decoration: none;
+  color: var(--menu-clr);
+  font-size: 1rem;
+}
+/*------------- //Header CSS Ends------------- */
