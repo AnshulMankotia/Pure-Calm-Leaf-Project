@@ -13,6 +13,8 @@
   --primary-font: halvetica-now-medium-500;
   --main-heading-font: halvetica-medium-extended-500;
   --paragraph-font: halvetica-now-medium-500;
+  --horizonal-line_clr: rgba(48, 81, 31, 0.2);
+  --spacer: 6rem;
 }
 
 /*------------------------- TYPOGRAPHY --------------------------------*/
@@ -58,6 +60,9 @@ h1 {
 p {
   color: var(--paragraph-clr);
 }
+a {
+  text-decoration: none;
+}
 
 .flex-row {
   display: flex;
@@ -69,9 +74,17 @@ p {
   max-width: 1670px;
   margin-inline: auto;
   padding: 0 1.5rem;
+  min-height: inherit;
 }
 
 /*------------- Header CSS Starts------------- */
+header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
 header .topBar {
   text-align: center;
   background-color: var(--primary-clr);
@@ -84,8 +97,8 @@ header .topBar p {
 header .secondar_menuBar {
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #979797;
-  padding: 1rem 0;
+  border-bottom: 1px solid var(--horizonal-line_clr);
+  padding: 0rem 6rem;
 }
 header .secondar_menuBar .main_logo {
   display: flex;
@@ -116,7 +129,7 @@ header .secondar_menuBar .support_wishlist {
   align-items: center;
   gap: 2rem;
 }
-header .secondar_menuBar .support_wishlist #theme_Button{
+header .secondar_menuBar .support_wishlist #theme_Button {
   background-color: transparent;
   border: none;
   outline: none;
@@ -137,27 +150,39 @@ header .widget_Area {
   background-color: var(--primary-clr);
   border-radius: 3.438rem;
   position: relative;
-  gap: 1rem;
-  padding: 0.5rem 0;
 }
 header .widget_Area .support {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.2rem 1rem 0.2rem 1.5rem;
+  padding: 1rem 1rem 1rem 1.5rem;
   cursor: pointer;
   border-right: 1px solid white;
   color: white;
   transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+}
+header .widget_Area .support::after{
+  position: absolute;
+  content: '';
+  border: 1px solid white;
+  height: 64%;
+  right: 0;
 }
 header .widget_Area .wishlist {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.2rem 1.5rem 0.2rem 0rem;
+  padding: 1rem 1rem 1rem 1.5rem;
   cursor: pointer;
   color: white;
   transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 header .widget_Area .support:hover,
 header .widget_Area .wishlist:hover {
@@ -168,22 +193,34 @@ header .widget_Area .wishlist:hover img {
   filter: contrast(0.5);
 }
 
-header .primary_menuBar {
+.mobile-icons {
+  display: none;
+}
+
+.primary_menuBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  position: relative;
+  padding: 0 6rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
 }
-header .primary_menuBar > ul {
+
+.primary_menuBar > ul {
   display: flex;
-  width: 40%;
   justify-content: space-between;
 }
-header .primary_menuBar > ul > li {
+
+.primary_menuBar > ul > li {
   list-style: none;
-  position: relative;
+  padding: 1.5rem 2rem;
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
 }
-header .primary_menuBar > ul > li:not(.home)::after {
+
+.primary_menuBar > ul > li:not(.home)::after {
   content: url("/assets/navigation_downarrow.svg");
   cursor: pointer;
   padding-left: 0.5rem;
@@ -191,14 +228,341 @@ header .primary_menuBar > ul > li:not(.home)::after {
   transform: rotate(0deg);
   transition: all 0.3s ease;
 }
-header .primary_menuBar > ul > li:hover:not(.home)::after {
+
+.primary_menuBar > ul > li:hover:not(.home)::after {
   transform: rotate(180deg);
   padding-left: 0;
   padding-right: 0.5rem;
 }
-header .primary_menuBar > ul > li > a {
+
+.primary_menuBar > ul > li > a {
   text-decoration: none;
   color: var(--menu-clr);
-  font-size: 1rem;
 }
+/* Apply font family to all <li> and <a> elements except specified ones */
+.primary_menuBar li:not(.home):not(.dropdown):not(.dropdown2) a,
+.primary_menuBar li:not(.home):not(.dropdown):not(.dropdown2) {
+  font-family: halvetica-medium-extended-500;
+  font-size: 0.83rem;
+}
+/*--------------- DROPDOWN FOR SHOP-------------- */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 3rem 6rem 1rem 6rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--horizonal-line_clr);
+}
+.mega-menu li {
+  list-style: none;
+}
+.mega-menu a {
+  text-decoration: none;
+  color: var(--paragraph-clr);
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+}
+.mega-menu a:hover {
+  color: var(--menu-clr);
+}
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid var(--horizonal-line_clr);
+  padding: 0rem 0rem 2rem 1rem;
+}
+.mega-menu .menu-column:last-child {
+  border-right: none;
+}
+.menu-column ul {
+  margin: 0;
+  padding: 0;
+}
+.menu-column ul > li {
+  padding: 0.3rem 0;
+}
+
+.menu-column h3 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+  font-size: 1.25rem;
+}
+
+.image-column {
+  display: flex;
+  align-items: center;
+}
+
+.image-column img {
+  max-width: 100%;
+}
+
+.info-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.info-box {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.info-box img {
+  height: 50px;
+  width: 50px;
+}
+.info-box h3 {
+  color: var(--secondary_clr);
+  letter-spacing: 0.04em;
+}
+.info-box p {
+  font-family: halvetica-now-medium-500;
+}
+.info-boxes .info-box:nth-of-type(2) {
+  justify-content: center;
+}
+.info-boxes .info-box:nth-of-type(3) {
+  justify-content: flex-end;
+}
+/*--------------- DROPDOWN FOR SHOP-------------- */
+
+/*--------------- DROPDOWN FOR SHOP BY STRAIN-------------- */
+.dropdown2 {
+  position: relative;
+}
+.dropdown-content2 {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.dropdown:hover .dropdown-content2,
+.dropdown-content2:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.strain {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: 1px solid var(--horizonal-line_clr);
+}
+.option p {
+  transition: color 0.3s ease;
+}
+.option:hover p {
+  color: var(--menu-clr);
+}
+.strain img {
+  height: 50px;
+  width: 50px;
+}
+
+/*--------------- DROPDOWN FOR SHOP BY STRAIN-------------- */
+
+/*--------------- DROPDOWN FOR SHOP BY BRANDS-------------- */
+#brands .mega-menu {
+  border-bottom: none;
+}
+/*--------------- DROPDOWN FOR SHOP BY BRANDS-------------- */
+
+/*--------------- DROPDOWN FOR RESOURCES-------------- */
+#resources {
+  position: relative;
+}
+.dropdown2 .dropdown-content2 {
+  left: 0%;
+  position: absolute;
+}
+.dropdown2 .dropdown-content2 ul > li {
+  list-style: none;
+  text-align: left;
+}
+.dropdown2 .dropdown-content2 ul > li a {
+  text-decoration: none;
+  color: var(--paragraph-clr);
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+  width: 100%;
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+}
+.dropdown2 .dropdown-content2 ul > li:hover a {
+  color: var(--menu-clr);
+}
+
+/*  */
+.accordion{
+  display: none;
+}
+/*--------------- DROPDOWN FOR RESOURCES-------------- */
+
 /*------------- //Header CSS Ends------------- */
+
+/*-------------- Section-1 Css Starts--------------- */
+.section-1 {
+  min-height: 100vh;
+  background-image: url("/assets/HeroImage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 12rem;
+}
+.section-1 .hero-section {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  width: 35%;
+  gap: 2rem;
+}
+.section-1 p {
+  color: #fafafa;
+  font-size: 1.25rem;
+  margin-left: 5rem;
+}
+.section-1 h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: 500;
+}
+.section-1 .btn-container {
+  width: 19rem;
+  border-radius: 6.25rem;
+  border: 2px solid white;
+  margin-top: 2rem;
+}
+.cta-btn {
+  background-color: white;
+  color: #e7524c;
+  border-radius: inherit;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.25rem;
+  font-family: halvetica-now-bold-700;
+  border: 2px solid #e7524c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: transparent;
+  color: white;
+}
+/*-------------- //Section-1 Css Ends--------------- */
+
+/*-------------- Section-2 Css Starts--------------- */
+.section-2 {
+  padding: 5rem 0;
+  margin-bottom: var(--spacer);
+}
+.section-2 .reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-2 .average_reviews {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.section-2 .average_reviews h2 {
+  font-size: 1.75rem;
+}
+.section-2 .review_slider {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+}
+.section-2 .item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section-2 .item span {
+  font-weight: 700;
+}
+.section-2 .item > :first-child {
+  padding-bottom: 1.2rem;
+}
+.section-2 .item > :last-child {
+  padding-top: 1.2rem;
+}
+.section-2 .item .stars {
+  width: 120px;
+}
+.owl-theme .owl-dots {
+  display: none;
+}
+.owl-theme .owl-nav {
+  margin-top: 0px !important;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 115%;
+  font-size: 5rem;
+  left: -8%;
+  top: 50%;
+}
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+  display: block;
+  width: 70%;
+}
+.owl-theme .owl-nav [class*="owl-"] {
+  transition: all 0.3s ease;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none !important;
+  filter: grayscale(1);
+  opacity: 0.4;
+  text-decoration: none;
+}
+.section-2 .wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+.leaf-seperator {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  gap: 1.5rem;
+}
+/*-------------- //Section-2 Css Ends--------------- */

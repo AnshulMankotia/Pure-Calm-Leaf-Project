@@ -1,0 +1,199 @@
+@media (max-width: 1437px) {
+  header .secondar_menuBar {
+    padding: 0rem 1rem;
+  }
+  .primary_menuBar {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .primary_menuBar > ul > li {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* --MEDIA QUERY WHICH IS SAME FOR TABLET AND MOBILE DESIGN --*/
+@media (min-width: 375px) and (max-width: 1024px) {
+  /* //header */
+  header {
+    position: static;
+  }
+  header .secondar_menuBar {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .primary_menuBar {
+    display: none;
+  }
+  .section-1 {
+    margin-top: 0rem;
+  }
+  .primary_menuBar {
+    padding: 0 1rem;
+  }
+  header .widget_Area {
+    display: none;
+  }
+  header .secondar_menuBar .support_wishlist #theme_Button {
+    display: none;
+  }
+  header .secondar_menuBar .search_bar input {
+    padding: 0.6rem 3rem;
+  }
+  .main_logo img:first-child {
+    width: 40px;
+  }
+  .main_logo img:last-child {
+    width: 60px;
+  }
+  .mobile-icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .mobile-icons img {
+    width: 20px;
+  }
+  .mobile-icons button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  /* mobile off-canvas menu */
+  .accordion-item {
+    margin-bottom: 5px;
+  }
+
+  .accordion-header {
+    background-color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(59, 99, 38, 0.2);
+  }
+
+  .accordion-content {
+    display: none;
+    padding: 10px;
+  }
+  .accordion-content li {
+    list-style: none;
+  }
+  .accordion-content a {
+    text-decoration: none;
+    color: var(--paragraph-clr);
+  }
+  .accordion {
+    position: fixed;
+    width: 65%;
+    min-height: 100vh;
+    background: white;
+    top: 0;
+    right: -100%;
+    margin-bottom: 10px;
+    display: block;
+    background-color: white;
+    z-index: 9999;
+    transition: right 0.3s ease-in-out;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .accordion.open {
+    right: 0;
+  }
+  .accordion #backArrow {
+    width: 30px;
+    margin: 2rem;
+  }
+  .menu-column {
+    align-items: start;
+    padding: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(59, 99, 38, 0.2);
+  }
+  .menu-column ul > li {
+    padding: 0.5rem 1.2rem;
+  }
+  .strain {
+    gap: 1rem;
+    padding: 0;
+    justify-content: flex-start;
+    border-bottom: none;
+    padding: 0.5rem 1rem;
+  }
+  .accordion-content li {
+    list-style: none;
+    padding: 0.5rem 1.2rem;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay color */
+    z-index: 9998; /* Set z-index below offcanvas menu */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s; /* Smooth transition effect */
+  }
+
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s; /* Remove transition delay */
+  }
+  /* mobile off-canvas menu */
+
+  /* //header */
+}
+/* --MEDIA QUERY WHICH IS SAME FOR TABLET AND MOBILE DESIGN --*/
+
+/* ----------------MEDIA QUERY TABLET DESIGN------------ */
+@media (min-width: 675px) and (max-width: 1024px) {
+  /* header */
+  header .secondar_menuBar .search_bar input {
+    padding: 1rem rem 3rem;
+  }
+  .mobile-icons img {
+    width: 32px;
+}
+.mobile-icons {
+    gap: 1rem;
+}
+  .main_logo img:first-child {
+    width: 70px;
+  }
+  .main_logo img:last-child {
+    width: 100px;
+  }
+  /*// header */
+
+  /* section-2 */
+  .section-2 .average_reviews {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .section-2 .average_reviews img {
+    width: 120px;
+  }
+  .section-2 .reviews {
+    gap: 4rem;
+    flex-direction: column;
+  }
+  .owl-carousel.owl-loaded {
+    width: 90%;
+  }
+  .leaf-seperator {
+    width: initial;
+  }
+  /* //section-2 */
+}
+/* ----------------MEDIA QUERY TABLET DESIGN------------ */
+
+/* -----------*********------*********------***********--------- */
+
+/* ----------------MEDIA QUERY MOBILE DESIGN------------ */
+
+/* ----------------MEDIA QUERY MOBILE DESIGN------------ */
