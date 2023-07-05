@@ -146,8 +146,25 @@
   /* mobile off-canvas menu */
 
   /* //header */
+
+  /* section-1 */
+  .owl-carousel.owl-loaded {
+    width: 80%;
+    padding-right: 0rem;
+  }
+  .owl-theme .owl-nav {
+    margin-top: 0px !important;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 117%;
+    font-size: 5rem;
+    left: -8%;
+    top: 50%;
+  }
+  /* section-1 */
 }
-/* --MEDIA QUERY WHICH IS SAME FOR TABLET AND MOBILE DESIGN --*/
+/* --//MEDIA QUERY WHICH IS SAME FOR TABLET AND MOBILE DESIGN --*/
 
 /* ----------------MEDIA QUERY TABLET DESIGN------------ */
 @media (min-width: 675px) and (max-width: 1024px) {
@@ -157,10 +174,10 @@
   }
   .mobile-icons img {
     width: 32px;
-}
-.mobile-icons {
+  }
+  .mobile-icons {
     gap: 1rem;
-}
+  }
   .main_logo img:first-child {
     width: 70px;
   }
@@ -168,6 +185,28 @@
     width: 100px;
   }
   /*// header */
+
+  /* section1 */
+  .section-1 {
+    background-image: url("/assets/bannerImage-mobile.svg");
+    background-position: center;
+  }
+  .section-1 .btn-container {
+    width: 14rem;
+    border: none;
+    margin-top: 1rem;
+  }
+  .section-1 .hero-section {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding-top: 5rem;
+    text-align: center;
+  }
+  .section-1 p {
+    margin-left: 0rem;
+  }
+  /* //section1 */
 
   /* section-2 */
   .section-2 .average_reviews {
@@ -182,18 +221,125 @@
     gap: 4rem;
     flex-direction: column;
   }
-  .owl-carousel.owl-loaded {
-    width: 90%;
-  }
   .leaf-seperator {
     width: initial;
   }
   /* //section-2 */
+
+  /* section-3 */
+  .section-3 .products {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  .section-3 .products .column {
+    height: 22rem;
+    background-size: cover;
+  }
+  .section-3 .leaf-seperator {
+    margin-top: 5rem;
+  }
+  /* //section-3 */
 }
 /* ----------------MEDIA QUERY TABLET DESIGN------------ */
 
 /* -----------*********------*********------***********--------- */
 
 /* ----------------MEDIA QUERY MOBILE DESIGN------------ */
+@media (min-width: 375px) and (max-width: 675px) {
+  header .secondar_menuBar .search_bar input {
+    padding: 0.6rem 1rem;
+  }
+  header .secondar_menuBar .search_bar img {
+    top: 25%;
+  }
 
+  /* section-1 */
+  .section-1 {
+    background-image: url("/assets/bannerImage-mobile.svg");
+    background-position: center;
+  }
+  .section-1 h1 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+  .section-1 .btn-container {
+    width: 14rem;
+    border: none;
+    margin-top: 1rem;
+  }
+  .section-1 .hero-section {
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    padding-top: 5rem;
+    text-align: center;
+  }
+  .section-1 p {
+    margin-left: 0rem;
+  }
+  .owl-theme .owl-nav{
+    width: 136%;
+    font-size: 5rem;
+    left: -17%;
+    top: 50%;
+  }
+  
+  .cta-btn {
+    border: none;
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+  /* //section-1 */
+
+  /* section2 */
+  .section-2 .reviews {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .section-2 .average_reviews {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .section-2 .average_reviews img {
+    width: 120px;
+  }
+  .section-2 .item {
+    text-align: center;
+    align-items: center;
+  }
+  .leaf-seperator {
+    margin-top: 5rem;
+  }
+  .leaf-seperator img:nth-of-type(1) {
+    width: 120px;
+  }
+  .leaf-seperator img:nth-of-type(3) {
+    width: 120px;
+  }
+  /* section2 */
+
+  /* section-3 */
+  .section-3 .products {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  .section-3 .products .column h1 {
+    font-size: 1rem;
+    padding: 0 0 1rem 1rem;
+  }
+  .section-3 .products .column {
+    height: 10rem;
+    background-size: cover;
+  }
+  .section-3 .product-types {
+    gap: 3rem;
+  }
+  .section-3 .product-types > h1 {
+    font-size: 1rem;
+  }
+
+  /* //section-3 */
+}
 /* ----------------MEDIA QUERY MOBILE DESIGN------------ */
