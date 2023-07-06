@@ -1,3 +1,4 @@
+//---------------- This is for Off-Canvas Menu------------------------ 
 const hamburgerMenuBtn = document.querySelector("#hamburger-menu");
 const accordion = document.querySelector("#main-accordion");
 const overlay = document.querySelector(".overlay");
@@ -17,6 +18,7 @@ overlay.addEventListener("click", function() {
   });
 
 
+// -----------------This is for accordion toggeling-----------------------
 document.addEventListener("DOMContentLoaded", function () {
     var accordionHeaders = document.querySelectorAll(".accordion-header");
 
@@ -29,3 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// ----------------This is for making wishlist icon fill-------------------
+
+  

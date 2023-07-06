@@ -148,11 +148,11 @@
   /* //header */
 
   /* section-1 */
-  .owl-carousel.owl-loaded {
+  .section-2 .owl-carousel.owl-loaded {
     width: 80%;
     padding-right: 0rem;
   }
-  .owl-theme .owl-nav {
+  .section-2 .owl-theme .owl-nav {
     margin-top: 0px !important;
     position: absolute;
     display: flex;
@@ -239,8 +239,34 @@
     margin-top: 5rem;
   }
   /* //section-3 */
+
+  /* section-4 */
+  .section-4 .feature {
+    width: 12.6875rem;
+    height: 12.0625rem;
+  }
+  .section-4 .feature span {
+    font-size: 1rem;
+  }
+  /* //section-4 */
+
+  /* //section-6 */
+  .section-6 .CBD-uses h1 {
+    text-align: center;
+  }
+  .section-6 .use .l-side img {
+    width: 80px;
+  }
+  .section-6 .use .l-side {
+    gap: 1rem;
+  }
+  .section-6 .use .l-side h2 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  /* //section-6 */
 }
-/* ----------------MEDIA QUERY TABLET DESIGN------------ */
+/* ----------------//MEDIA QUERY TABLET DESIGN------------ */
 
 /* -----------*********------*********------***********--------- */
 
@@ -278,13 +304,13 @@
   .section-1 p {
     margin-left: 0rem;
   }
-  .owl-theme .owl-nav{
+  .section-2 .owl-theme .owl-nav {
     width: 136%;
     font-size: 5rem;
     left: -17%;
     top: 50%;
   }
-  
+
   .cta-btn {
     border: none;
     padding: 0.7rem;
@@ -337,9 +363,83 @@
     gap: 3rem;
   }
   .section-3 .product-types > h1 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   /* //section-3 */
+
+  /* section-4 */
+  .section-4 .feature {
+    width: 12.6875rem;
+    height: 12.0625rem;
+  }
+  .section-4 .feature span {
+    font-size: 0.625rem;
+  }
+  .section-4 .feature {
+    width: 7.6875rem;
+    height: 7.0625rem;
+    gap: 1rem;
+  }
+  .section-4 .features img {
+    width: 35px;
+  }
+  .section-4 .features {
+    gap: 1rem;
+  }
+  .section-4 .heading h1 {
+    font-size: 1.25rem;
+  }
+  .section-4 .heading p {
+    font-size: 1rem;
+  }
+  /* //section-4 */
+
+
+  /* section-5 */
+  .section-5 {
+    padding:0;
 }
-/* ----------------MEDIA QUERY MOBILE DESIGN------------ */
+  .section-5 .best-sellProducts > h1 {
+    font-size: 1.25rem;
+    padding-bottom: 5rem;
+}
+  /* //section-5 */
+
+  /* section-6 */
+  .section-6 {
+    padding:0;
+}
+  .section-6 .CBD-uses h1 {
+    font-size: 1.25rem;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .section-6 .use .l-side img {
+    width: 80px;
+  }
+  .section-6 .use .l-side {
+    gap: 1rem;
+  }
+  .section-6 .use .l-side h2 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  .section-6 .use {
+    flex-direction: column-reverse;
+}
+  .section-6 .use:nth-of-type(2) {
+    flex-direction: column;
+}
+.section-6 .use .l-side {
+  width: 100%;
+}
+.section-6 .use .r-side {
+  width: 100%;
+}
+.section-6 .use .l-side img {
+  width: 60px;
+}
+  /* //section-6 */
+}
+/* ----------------//MEDIA QUERY MOBILE DESIGN------------ */

@@ -431,7 +431,7 @@
               <p>Based on 678 reviews</p>
             </div>
 
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel carousel_se_01_carousel owl-theme">
               <div class="item">
                 <img class="stars" src="/assets/Rating Stars.svg" alt="" />
                 <span>Great Service, Love their...</span>
@@ -548,6 +548,146 @@
         </div>
       </section>
       <!----------------- Section-3 Ends------------------->
+
+      <!----------------- Section-4 Starts---------------- -->
+      <section class="section-4">
+        <div class="container">
+          <div class="guarantee">
+            <div class="heading">
+              <h1>Worry Free Guarantee</h1>
+              <p>
+                Tired it? Don't like it? Don't worry. Send it back, and we'll
+                give you store credit for <br />
+                something new. Terms & condition apply.
+              </p>
+            </div>
+
+            <div class="features">
+              <div class="feature">
+                <img src="/assets/handshake-icon.svg" alt="" />
+                <span>15-Days Guarantee</span>
+              </div>
+              <div class="feature">
+                <img src="/assets/flask.svg" alt="" />
+                <span>DEA Certified Lab Testing</span>
+              </div>
+              <div class="feature">
+                <img src="/assets/carbon_delivery.svg" alt="" />
+                <span>Free Shipping</span>
+              </div>
+            </div>
+          </div>
+          <div class="leaf-seperator">
+            <img src="assets/left-long-arrow.svg" alt="" />
+            <img src="assets/main_logo1.svg" alt="" />
+            <img src="assets/right-long-arrow.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!----------------- Section-4 Ends---------------- -->
+
+      <!----------------- Section-5 Starts---------------- -->
+      <section class="section-5">
+        <div class="container">
+          <div class="best-sellProducts">
+            <h1>Best Selling Products</h1>
+            <div class="owl-carousel carousel_se_02_carousel owl-theme">
+              <div class="item">
+                <a href="">
+                <div class="product-image">
+                  <img src="/assets/drops_img.png" alt="">
+                </div>
+              </a>
+                <div class="product-info">
+                  <h2>CBD Oil Drops 600mg - 30ml</h2>
+                  <div class="total-reviews">
+                    <img src="/assets/Rating Stars.svg" alt=""> 
+                    <p>60 reviews</p>
+                  </div>
+                  
+                  <div class="item-price"> <span>$299</span><span>$199</span> </div>
+                  <a href="">
+                    <div class="btn-container">
+                      <button class="cta-btn">Add to cart</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="leaf-seperator">
+            <img src="assets/left-long-arrow.svg" alt="" />
+            <img src="assets/main_logo1.svg" alt="" />
+            <img src="assets/right-long-arrow.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!----------------- Section-5 Ends---------------- -->
+      
+      
+      
+      <!----------------- Section-6 Starts---------------- -->
+      <section class="section-6">
+        <div class="container">
+          <div class="CBD-uses">
+          <h1>Immersive use of CBD for a soothing life</h1>
+          <div class="use">
+            <div class="l-side">
+              <img src="/assets/lotus.svg" alt="">
+              <h2>Calm, Relax & Rejuvenate</h2>
+              <p>High quality non-GMO CBD gummies infused with Ashwagandha for a mellow & calming experience. Unleash your inner zen with these premium CBD gummies.</p>
+              <a href="">
+                <div class="btn-container">
+                  <button class="cta-btn">Shop CBD</button>
+                </div>
+              </a>
+            </div>
+            <div class="r-side">
+             <img src="/assets/relax_Img.png" alt="">
+            </div>
+          </div>
+
+          <div class="use">
+            <div class="r-side">
+             <img src="/assets/sleep_img.png" alt="">
+            </div>
+            <div class="l-side">
+              <img src="/assets/sleep-icon.svg" alt="">
+              <h2>Calm, Relax & Rejuvenate</h2>
+              <p>High quality non-GMO CBD gummies infused with Ashwagandha for a mellow & calming experience. Unleash your inner zen with these premium CBD gummies.</p>
+              <a href="">
+                <div class="btn-container">
+                  <button class="cta-btn">Shop CBD</button>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="use">
+            <div class="l-side">
+              <img src="/assets/recovery-icon.svg" alt="">
+              <h2>Calm, Relax & Rejuvenate</h2>
+              <p>High quality non-GMO CBD gummies infused with Ashwagandha for a mellow & calming experience. Unleash your inner zen with these premium CBD gummies.</p>
+              <a href="">
+                <div class="btn-container">
+                  <button class="cta-btn">Shop CBD</button>
+                </div>
+              </a>
+            </div>
+            <div class="r-side">
+             <img src="/assets/recovery_Img.png" alt="">
+            </div>
+          </div>
+          </div>
+          <div class="leaf-seperator">
+            <img src="assets/left-long-arrow.svg" alt="" />
+            <img src="assets/main_logo1.svg" alt="" />
+            <img src="assets/right-long-arrow.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!----------------- Section-6 Ends---------------- -->
     </main>
 
     <script
@@ -562,11 +702,32 @@
       const prevIcon =
         '<img src= "./assets/circled_left-arrow.svg" alt:"left">';
 
-      $(".owl-carousel").owlCarousel({
+      $(".carousel_se_01_carousel").owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
         navText: [prevIcon, nextIcon],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 3,
+          },
+          1400: {
+            items: 4,
+          },
+        },
+      });
+
+      
+      $(".carousel_se_02_carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
         responsive: {
           0: {
             items: 1,
