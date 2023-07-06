@@ -33,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// ----------------This is for making wishlist icon fill-------------------
+
+
+
+//------------------------This is for Section-7 Accordion---------------------
+const accordion2 = document.getElementsByClassName('contentBx');
+for (i = 0; i < accordion2.length; i++) {
+    accordion2[i].addEventListener('click', function () {
+        this.classList.toggle('active')
+    });
+}
 
   

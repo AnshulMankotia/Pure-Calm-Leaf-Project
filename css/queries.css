@@ -162,7 +162,16 @@
     left: -8%;
     top: 50%;
   }
-  /* section-1 */
+  /* //section-1 */
+
+  /* section-5 */
+  .section-5 .owl-theme .owl-nav {
+    z-index: 0;
+  }
+  .section-5 .item .product-image {
+    height: 24rem;
+  }
+  /* //section-5 */
 }
 /* --//MEDIA QUERY WHICH IS SAME FOR TABLET AND MOBILE DESIGN --*/
 
@@ -395,25 +404,25 @@
   }
   /* //section-4 */
 
-
   /* section-5 */
   .section-5 {
-    padding:0;
-}
+    padding: 0;
+  }
   .section-5 .best-sellProducts > h1 {
     font-size: 1.25rem;
     padding-bottom: 5rem;
-}
+  }
   /* //section-5 */
 
   /* section-6 */
   .section-6 {
-    padding:0;
-}
+    padding: 0;
+  }
   .section-6 .CBD-uses h1 {
     font-size: 1.25rem;
     padding-bottom: 0;
     text-align: center;
+    line-height: 2rem;
   }
   .section-6 .use .l-side img {
     width: 80px;
@@ -427,19 +436,44 @@
   }
   .section-6 .use {
     flex-direction: column-reverse;
-}
+  }
   .section-6 .use:nth-of-type(2) {
     flex-direction: column;
-}
-.section-6 .use .l-side {
-  width: 100%;
-}
-.section-6 .use .r-side {
-  width: 100%;
-}
-.section-6 .use .l-side img {
-  width: 60px;
-}
+  }
+  .section-6 .use .l-side {
+    width: 100%;
+  }
+  .section-6 .use .r-side {
+    width: 100%;
+  }
+  .section-6 .use .l-side img {
+    width: 60px;
+  }
   /* //section-6 */
+
+  /* section-7 */
+  .section-7 .accordion2 .contentBx .label {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+  .section-7 .accordion2 .contentBx .label li {
+    list-style: none;
+    padding-right: 2rem;
+  }
+  .section-7 .accordion2 .contentBx p {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    padding-right: 0rem;
+  }
+  .section-7 .accordion2 .contentBx .label::after {
+    right: 5%;
+}
+.section-7 {
+  padding:0;
+}
+.section-7 .faq h1 {
+  font-size: 2.25rem;
+}
+  /* //section-7 */
 }
 /* ----------------//MEDIA QUERY MOBILE DESIGN------------ */
