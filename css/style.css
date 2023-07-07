@@ -74,7 +74,7 @@ a {
 .container {
   max-width: 1670px;
   margin-inline: auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   min-height: inherit;
 }
 
@@ -956,3 +956,194 @@ margin-inline: auto;
   padding:1.5rem;
 }
 /* ------------------//Section-7 Css Ends----------- */
+
+
+
+
+/* ------------------Section-9 Css Starts----------- */
+.section-9 {
+  padding: 5rem 0 0 0;
+  margin-bottom: var(--spacer);
+}
+.section-9 .wrapper{
+  background-image: url("/assets/signUp_Bg_Img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+.section-9 .newsletter{
+  width: 45%;
+  margin-inline: auto;
+  padding: 6rem 0;
+}
+.section-9 .sign-up{
+  width: 100%;
+  display: flex;
+ text-align: center;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+.section-9 .sign-up h2{
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+.section-9 .sign-up input{
+  width: 100%;
+  padding: 1.35rem 3rem;
+  border-radius: 6.25rem;
+  border: 1px solid black;
+  outline: none;
+  font-family: halvetica-now-bold-700;
+}
+.section-9 .btn-container {
+  width: 13rem;
+}
+.section-9 .input-field{
+  position: relative;
+}
+.section-9 .input-field a{
+  position: absolute;
+  right: 0;
+    top: 0;
+}
+/* ------------------//Section-9 Css Ends----------- */
+
+
+/* ------------------Section-10 Css Starts----------- */
+.section-10{
+  padding: 5rem 0 0.5rem 0;
+}
+.section-10 .delivery-services{
+  grid-template-columns: repeat(4,1fr);
+  gap: 0.5rem;
+}
+.section-10 .delivery-services .column{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  background-color: rgba(48, 81, 31, 0.1);
+  padding: 0.7rem;
+  cursor: pointer;
+  transition:all 0.2s ease-in-out;
+}
+.section-10 .delivery-services .column img{
+  width: 60px;
+  height: 60px;
+}
+.section-10 .delivery-services .column:hover img{
+  filter: brightness(15.5);
+}
+.section-10 .delivery-services .column:hover{
+  background-color: var(--primary-clr);
+}
+.section-10 .delivery-services .column:hover span{
+color: white;
+}
+
+/* ------------------//Section-10 Css Ends----------- */
+
+
+
+
+/*------------------- Footer Css Starts --------------*/
+footer{
+  background-color: rgba(48, 81, 31, 0.1);
+}
+footer .container{
+  padding: 3rem 0;
+}
+footer .social-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+footer .social-links .main_logo{
+  display: flex;
+  align-items: center;
+}
+footer .social-links .social-icons{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer .social-icons .icon img {
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons .icon:hover img {
+  transform: scale(1.1);
+}
+footer .social-icons .icon:hover img[src$="fb-icon-default.svg"] {
+  content: url("/assets/fb-icon-varient.svg");
+}
+
+footer .social-icons .icon:hover img[src$="tweeter-icon-default.svg"] {
+  content: url("/assets/tweeter-icon-varient.svg");
+}
+footer .social-icons .icon:hover img[src$="pinterest-icon-default.svg"] {
+  content: url("/assets/pinterest-icon-varient.svg");
+}
+footer .social-icons .icon:hover img[src$="instagram-icon-default.svg"] {
+  content: url("/assets/instagram-icon-varient.svg");
+}
+
+footer .social-icons .icon:hover img[src$="youtube-icon-default.svg"] {
+  content: url("/assets/youtube-icon-varient.svg");
+}
+
+footer .foot-nav{
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot-links{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer .foot-links .phone, .e-mail{
+  display: flex;
+  align-items: center;
+}
+.foot-nav > .foot-links:first-child img{
+  width: 30px;
+  height: 30px;
+}
+.foot-nav > .foot-links:first-child p{
+  padding-left: 1rem;
+}
+.foot-nav  .foot-links span{
+  font-size: 1.5rem;
+  font-family: var(--main-heading-font);
+  position: relative;
+  margin-bottom: 2rem;
+}
+.foot-nav  .foot-links span::after{
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 40%;
+  background-color: var(--primary-clr);
+  left: 0;
+  top: 100%;
+  height: 2px;
+}
+.foot-nav  .foot-links li{
+  list-style: none;
+  padding-bottom: 1.5rem;
+}
+.foot-nav  .foot-links a{
+  text-decoration: none;
+  color: var(--paragraph-clr);
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.foot-nav  .foot-links a:hover{
+  color: var(--primary-clr);
+}
+/*------------------- Footer Css Ends --------------*/

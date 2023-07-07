@@ -274,6 +274,20 @@
     line-height: 2rem;
   }
   /* //section-6 */
+
+  /* section-9 */
+  .section-9 .newsletter {
+    width: 65%;
+  }
+  /* //section-9 */
+  
+  
+  /* section-10 */
+  .section-10 .delivery-services{
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+  }
+  /* //section-10 */
 }
 /* ----------------//MEDIA QUERY TABLET DESIGN------------ */
 
@@ -467,13 +481,42 @@
   }
   .section-7 .accordion2 .contentBx .label::after {
     right: 5%;
-}
-.section-7 {
-  padding:0;
-}
-.section-7 .faq h1 {
-  font-size: 2.25rem;
-}
+  }
+  .section-7 {
+    padding: 0;
+  }
+  .section-7 .faq h1 {
+    font-size: 2.25rem;
+  }
   /* //section-7 */
+
+  /* section-9 */
+  .section-9 {
+    padding: 0;
+  }
+  .section-9 .newsletter {
+    width: 90%;
+  }
+  .section-9 .sign-up h2 {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .section-9 .sign-up input {
+    padding: 0.9rem 3rem;
+  }
+  .section-9 .btn-container {
+    width: 8rem;
+  }
+  /* //section-9 */
+
+
+  /* section-10 */
+  .section-10 {
+    padding: 0;
+}
+  .section-10 .delivery-services{
+    grid-template-columns: repeat(1,1fr);
+  }
+  /* //section-10 */
 }
 /* ----------------//MEDIA QUERY MOBILE DESIGN------------ */
