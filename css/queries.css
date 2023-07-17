@@ -466,20 +466,20 @@
   /* //section-6 */
 
   /* section-7 */
-  .section-7 .accordion2 .contentBx .label {
+  .accordion2 .contentBx .label {
     font-size: 0.85rem;
     padding: 1rem;
   }
-  .section-7 .accordion2 .contentBx .label li {
+  .accordion2 .contentBx .label li {
     list-style: none;
     padding-right: 2rem;
   }
-  .section-7 .accordion2 .contentBx p {
+  .accordion2 .contentBx p {
     font-size: 0.85rem;
     line-height: 1.3rem;
     padding-right: 0rem;
   }
-  .section-7 .accordion2 .contentBx .label::after {
+  .accordion2 .contentBx .label::after {
     right: 5%;
   }
   .section-7 {
@@ -516,6 +516,12 @@
 }
   .section-10 .delivery-services{
     grid-template-columns: repeat(1,1fr);
+  }
+  footer .foot-nav{
+    display: none;
+  }
+  footer .accordion2{
+    display: flex;
   }
   /* //section-10 */
 }
