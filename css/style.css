@@ -175,6 +175,9 @@ header .widget_Area .support {
   outline: none;
   position: relative;
 }
+header .widget_Area .support a{
+  color: white;
+}
 header .widget_Area .support::after {
   position: absolute;
   content: "";
