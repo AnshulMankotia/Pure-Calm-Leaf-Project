@@ -10,11 +10,16 @@
   --secondary_clr: #497931;
   --menu-clr: #024019;
   --paragraph-clr: #818181;
-  --primary-font: halvetica-now-medium-500;
-  --main-heading-font: halvetica-medium-extended-500;
-  --paragraph-font: halvetica-now-medium-500;
+  --primary-font: Roboto-Medium-500;
+  --main-heading-font: Roboto-Medium-500;
+  --paragraph-font: Roboto-Medium-500;
   --horizonal-line_clr: rgba(48, 81, 31, 0.2);
   --spacer: 6rem;
+  --border-field: #B3B3B3;
+  --abstract-color: #E7524C;
+  --fb-icon-clr: #3D5A98;
+  --google-icon-clr: #0871EC;
+  --transparent-clr: #ffff;
 }
 
 /*------------------------- TYPOGRAPHY --------------------------------*/
@@ -1151,3 +1156,403 @@ footer .accordion2{
   display: none;
 }
 /*------------------- Footer Css Ends --------------*/
+
+
+/******** vishal css***************/
+/************ blog-page-css-start ****************/
+.main_blog{
+  padding: 0 6rem;
+}
+.located-page {
+  padding: 15rem 0 3rem 0;
+}
+.fix-image{
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+.tfc-arrow {
+  width: 8px;
+}
+.located-page ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.located-page li {
+font-size: 1rem;
+color: var(--paragraph-clr);
+font-family: Roboto-Medium-500;
+}
+.blog-post-tfc {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.product-image {
+  padding-right: 4rem;
+}
+
+.product-image h2 {
+  color: var(--green, #30511F);
+  font-family: Roboto-Medium-500;
+  font-size: 36px;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+.product-discount h4 {
+  font-size: 24px;
+  font-family: Roboto-Medium-500;
+  color: var(--primary-clr);
+  margin-bottom: 3rem;
+}
+.blog-section {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  max-width: 62rem;
+  width: 100%;
+}
+.tfc-blog-post {
+  padding-bottom: 3rem;
+}
+.blog-image-box {
+  width: 100%;
+  height: 32rem;
+  overflow: hidden;
+}
+.tfc-zoom-effect{
+  transition: 0.5s;
+}
+.tfc-zoom-effect:hover {
+  transform: scale(1.1);
+}
+.fixed-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tfc-blog-post h4{
+  font-family: Roboto-Medium-500;
+  color: var(--primary-clr);
+  font-size: 24px;
+  padding: 2rem 0;
+  line-height: 29px;
+}
+.tfc-read-btn {
+  display: flex;
+  gap: 0.40rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn-container {
+  width: 13rem;
+  border: 2px solid var(--primary-clr);
+  margin-top: 0rem;
+  padding: 1px;
+  width: 12rem;
+  border-radius: 6.25rem;
+  }
+  .cta-btn {
+  background-color: var(--primary-clr);
+  color: white;
+  border-radius: inherit;
+  padding: 0.85rem;
+  width: 100%;
+  font-size: 1.25rem;
+  font-family: Roboto-Bold-700;
+  border: 2px solid var(--primary-clr);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  }
+  .cta-btn p{
+    color: white;
+    font-size: 16px;
+  }
+  .cta-btn span{
+    color: white;
+    font-size: 11px;
+  }
+  .cta-btn:hover {
+  background-color: white;
+  border: 2px solid transparent;
+  color:  var(--green, #30511F);
+  }
+.cta-btn:hover> p, .cta-btn:hover> span{
+  color:  var(--green, #30511F);
+}
+
+/*********delta-blog-page-css*********/
+
+.delta-image{
+  max-width: 485px;
+  height: 393px;
+}
+.delta-tfc{
+  position: relative;
+}
+.delt-image-overlap-text{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  z-index: 788;
+}
+.delt-image-overlap-text h3 {
+  font-size: 48px;
+  font-weight: 500;
+  font-family: Roboto-Medium-500;
+  margin-bottom: 0.85rem;
+}
+.delt-image-overlap-text p {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: Roboto-Medium-500;
+  color: var(--green, #30511F);
+  margin: 1.86rem 0;
+}
+.tfc-btn-container {
+  border: 2px solid var(--primary-clr);
+  margin-top: 0rem;
+  padding: 1px;
+  width: 9rem;
+  border-radius: 6.25rem;
+}
+
+.dtx-cta-btn {
+  background-color: var(--primary-clr);
+  color: white;
+  border-radius: inherit;
+  padding: 0.85rem;
+  width: 100%;
+  font-size: 0.875rem;
+  font-family: Roboto-Bold-700;
+  border: 2px solid var(--primary-clr);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dtx-cta-btn:hover{
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: var(--primary-clr);
+}
+
+/****** mail-box-field *******/
+.email-box-field{
+border: 1px solid red;
+margin: 20px;
+}
+
+.sign-up input{
+width: 100%;
+padding: 1.35rem 3rem;
+border-radius: 6.25rem;
+border: 1px solid black;
+outline: none;
+font-family: Roboto-Bold-700;
+}
+ .input-field{
+position: relative;
+}
+ .input-field a{
+position: absolute;
+right: 0;
+    top: 0;
+}
+.sign-up h2 {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: Roboto-Medium-500;
+  color: var(--green, #30511F);
+  margin: 4rem 0 2rem;
+}
+/********** blog page css end *******/
+
+
+
+
+/***********
+****** login-page-css-start ********
+*************/
+.tfc-registation {
+  padding: 15rem 0 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.login_form h4, .Register_form h4 {
+  font-size: 2.25rem;
+  color: var(--secondary_clr);
+  font-family: Roboto-Medium-500;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  padding: 0 2rem;
+}
+.g_line{
+border: 1px solid var(--secondary_clr);
+}
+.login_form {
+  padding: 0 3rem 0 0;
+  position: relative;
+}
+.login_form::before{
+content: " ";
+border: 1px solid rgba(48, 81, 31, 0.2);
+position: absolute;
+right: 0;
+top: 0;
+bottom: 0;
+}
+.tfc-login-section{
+margin-top: 4.8rem;
+}
+
+.dtx-input_field {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  border: 2px solid var(--border-field);
+  outline: none;
+  font-size: 1rem;
+}
+.field-label{
+padding: 0 0 0 2rem;
+font-size: 1rem;
+color: var(--primary-clr);
+}
+.field-label span {
+  color: var(--abstract-color);
+  padding-left: 0.5rem;
+}
+.space-bw-input{
+margin: 10px 0 20px 0;
+}
+.tfc-checkbox{
+padding: 0 2rem;
+margin-bottom: 2rem;
+}
+
+.form-group input {
+padding: 0;
+height: initial;
+width: initial;
+margin-bottom: 0;
+display: none;
+cursor: pointer;
+}
+
+.form-group label {
+position: relative;
+cursor: pointer;
+align-items: center;
+display: flex;
+
+}
+
+.form-group label:before {
+content:'';
+background-color: transparent;
+border: 2px solid var(--primary-clr);
+width: 1.5rem;
+height: 1.5rem;
+display: inline-block;
+position: relative;
+vertical-align: middle;
+cursor: pointer;
+margin-right: 1rem;
+border-radius: 100%;
+transition: all .3s
+}
+
+.form-group input:checked + label:after {
+content: '';
+display: block;
+position: absolute;
+top: 6px;
+left: 10px;
+width: 5px;
+height: 10px;
+border: solid var(--primary-clr);
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+
+}
+.tfc-checkbox{
+display: flex;
+justify-content: space-between;
+align-items: center;
+} 
+.dtx-same-color{
+font-size: 1rem;
+font-family: Roboto-Medium-500;
+font-weight: 500;
+color: var(--primary-clr);
+}
+
+/****** Register-section-css-start****/
+.Register_form {
+padding: 0 0 0 3rem;
+}
+.tfc-reg-section{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.6875rem;
+}
+/***** social_media_btn *****/
+.social_media_btn{
+display: block;
+}
+.tfc-social-content {
+padding: 2px;
+text-align: center;
+border-radius: 100px;
+background-color: var(--fb-icon-clr);
+display: flex;
+align-items: center;
+position: relative;
+}
+.tfc-icon-box-bg{
+background-color: var(--google-icon-clr) !important;
+}
+.media_icon {
+width: 3.6rem;
+height: 3.6rem;
+border-radius: 100px;
+background-color: var(--transparent-clr);
+display: grid;
+place-items: center;
+}
+.media_icon_logo{
+width: 1.5rem;
+height: 1.5rem;
+}
+
+.link-icon-social-network{
+display: grid;
+grid-template-columns: 4fr 0.5fr 4fr;
+align-items: center;
+}
+.link-icon-social-network h2{
+text-align: center;
+font-size: 1rem;
+color: var(--primary-clr);
+font-family: Roboto-Medium-500;
+font-weight: 500;
+}
+.tfc_space-media-coin{
+margin-top: 3.6rem;
+}
+.tfc_space-login{
+margin-top: 10.4rem;
+}
+.tfc-social-content h6 {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 880;
+font-family: urbanist-medium-500;
+font-weight: 500;
+font-size: 0.8rem;
+color: var(--transparent-clr);
+}
+/******* login-page-css-end *********/

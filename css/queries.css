@@ -526,3 +526,143 @@
   /* //section-10 */
 }
 /* ----------------//MEDIA QUERY MOBILE DESIGN------------ */
+
+/*---------- media query vishal-------------------*/
+@media (max-width: 1437px){
+  .main_blog {
+      padding: 0 1.5rem;
+  }
+}
+@media (max-width: 1250px) {
+  .main_blog {
+      padding: 0 0.4rem;
+  }
+  .product-image h2 {
+      font-size: 29px;
+  }
+  .product-discount h4 {
+      font-size: 22px;
+  }
+  .tfc-blog-post h4 {
+      font-size: 20px;
+  }
+  .delt-image-overlap-text {
+      left: 20px;
+  }
+  .delt-image-overlap-text h3 {
+      font-size: 42px;
+  }
+  .delt-image-overlap-text p {
+      font-size: 20px;
+      margin: 1rem 0;
+  }
+  .blog-image-box {
+      height: 28rem;
+  }
+  .product-image {
+      padding-right: 2.45rem;
+  }
+  .btn-container {
+      width: 9rem;
+  }
+  .sign-up input {
+      padding: 1.2rem 1rem;
+  }
+  .cta-btn {
+      padding: 0.7rem;
+  }
+}
+@media (max-width: 1024px) {
+  .located-page {
+      padding: 2rem 0 2rem 0;
+  }
+  .blog-image-box {
+      height: 21rem;
+  }
+  .product-discount {
+      padding-left: 1.5rem;
+  }
+  .product-image {
+      padding-right: 0rem;
+  }
+  .delta-image {
+      height: 336px;
+  }
+  .delt-image-overlap-text {
+      left: 15px;
+  }
+  .dtx-cta-btn:hover {
+      background-color: var(--primary-clr);
+      border: 2px solid var(--primary-clr);
+      color: none;
+  }
+}
+@media (max-width: 991px) {
+  .blog-post-tfc {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  .product-image{
+      order: 2;
+  }
+  .product-discount {
+      order: 1;
+      padding: 0 0 6rem;
+  }
+  .btn-container {
+      width: 12rem;
+  }
+  .delta-image {
+      height: 680px;
+      max-width: 100%;
+  }
+  .delt-image-overlap-text h3 {
+      font-size: 90px;
+  }
+  .delt-image-overlap-text p {
+      font-size: 43px;
+      margin: 3rem 0;
+      line-height: 3.4rem;
+  }
+  .tfc-btn-container {
+      border: 2px solid var(--primary-clr);
+      margin-top: 0rem;
+      padding: 1px;
+      width: 13rem;
+      border-radius: 6.25rem;
+  }
+  .delt-image-overlap-text {
+      left: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .tfc-blog-post h4 {
+      font-size: 16px;
+      padding: 1rem 0;
+  }
+  .delt-image-overlap-text h3 {
+      font-size: 70px;
+  }
+  .delt-image-overlap-text p {
+      font-size: 30px;
+      margin: 2rem 0;
+      line-height: 3rem;
+  }
+  .delta-image {
+      height: 680px;
+  }
+  .cta-btn {
+      padding: 0.7rem;
+  }
+  .blog-section {
+      grid-template-columns: 1fr;
+  }
+  .blog-image-box {
+      height: 43rem;
+  }
+}
+@media (max-width:  675px) {
+  .cta-btn {
+      padding: 1rem;
+  }
+}
