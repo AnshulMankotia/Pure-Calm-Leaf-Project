@@ -21,27 +21,30 @@
   --google-icon-clr: #0871EC;
   --transparent-clr: #ffff;
 }
-
 /*------------------------- TYPOGRAPHY --------------------------------*/
 @font-face {
-  font-family: halvetica-medium-extended-500;
-  src: url("/Typography/Helvetica\ Neue\ Medium\ Extended.otf");
+  font-family: Roboto-Medium-500;
+  src: url("/Typography/Roboto-Medium.ttf");
 }
 @font-face {
-  font-family: halvetica-now-bold-700;
-  src: url("/Typography/HelveticaNowDisplay-Bold.ttf");
+  font-family: Roboto-Bold-700;
+  src: url("/Typography/Roboto-Bold.ttf");
 }
 @font-face {
-  font-family: halvetica-now-light-300;
-  src: url("/Typography/HelveticaNowDisplay-Light.ttf");
+  font-family: Roboto-Light-300;
+  src: url("/Typography/Roboto-Light.ttf");
 }
 @font-face {
-  font-family: halvetica-now-medium-500;
-  src: url("/Typography/HelveticaNowDisplay-Medium.ttf");
+  font-family: Roboto-Medium-500;
+  src: url("/Typography/Roboto-Medium.ttf");
 }
 @font-face {
-  font-family: halvetica-now-regular-400;
-  src: url("/Typography/HelveticaNowDisplay-Regular.ttf");
+  font-family: Roboto-Regular-400;
+  src: url("/Typography/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: urbanist-medium-500;
+  src: url("/Typography/Urbanist-Medium.ttf");
 }
 /*------------------------- TYPOGRAPHY --------------------------------*/
 
@@ -123,7 +126,7 @@ header .secondar_menuBar .search_bar input {
   border-radius: 1.5rem;
   border: 1px solid black;
   outline: none;
-  font-family: halvetica-now-bold-700;
+  font-family: Roboto-Bold-700;
 }
 header .secondar_menuBar .search_bar img {
   position: absolute;
@@ -255,7 +258,7 @@ header .widget_Area .wishlist:hover img {
 /* Apply font family to all <li> and <a> elements except specified ones */
 .primary_menuBar li:not(.home):not(.dropdown):not(.dropdown2) a,
 .primary_menuBar li:not(.home):not(.dropdown):not(.dropdown2) {
-  font-family: halvetica-medium-extended-500;
+  font-family: Roboto-Medium-500;
   font-size: 0.83rem;
 }
 /*--------------- DROPDOWN FOR SHOP-------------- */
@@ -351,7 +354,7 @@ header .widget_Area .wishlist:hover img {
   letter-spacing: 0.04em;
 }
 .info-box p {
-  font-family: halvetica-now-medium-500;
+  font-family: Roboto-Medium-500;
 }
 .info-boxes .info-box:nth-of-type(2) {
   justify-content: center;
@@ -485,7 +488,7 @@ header .widget_Area .wishlist:hover img {
   padding: 1rem;
   width: 100%;
   font-size: 1.25rem;
-  font-family: halvetica-now-bold-700;
+  font-family: Roboto-Bold-700;
   border: 2px solid #e7524c;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -665,7 +668,7 @@ header .widget_Area .wishlist:hover img {
   padding: 0.85rem;
   width: 100%;
   font-size: 1.25rem;
-  font-family: halvetica-now-bold-700;
+  font-family: Roboto-Bold-700;
   border: 2px solid var(--primary-clr);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1003,7 +1006,7 @@ margin-inline: auto;
   border-radius: 6.25rem;
   border: 1px solid black;
   outline: none;
-  font-family: halvetica-now-bold-700;
+  font-family: Roboto-Bold-700;
 }
 .section-9 .btn-container {
   width: 13rem;
